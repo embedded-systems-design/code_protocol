@@ -10,7 +10,7 @@ void timer_callback(void)
     {
         ms -= 1000;
         sec++;
-        IO_RA2_Toggle();
+        IO_RD2_Toggle();
     }
 }
 
@@ -192,8 +192,8 @@ int main(void)
 ////            printf("AZbaPIC: Heartbeat %u YB",sec);
 //        }
         
-        if (IO_RC2_GetValue()!=0)
-        {return 1;}
+//        if (IO_RC2_GetValue()!=0)
+//        {return 1;}
         
         sec_last = sec;
         ms_last = ms;
